@@ -1,0 +1,16 @@
+{
+  "name": "ReactComment",
+  "version": "0.0.1",
+  "description": "React Comment Box Demo",
+  "main": "server.js",
+  "repository": "",
+  "license": "Proprietary",
+  "private": true,
+  "dependencies": {
+    "body-parser": "^1.5.2",
+    "express": "~4.0.0",
+    "express-partials": "~0.2.0",
+    "nodemon": "^1.2.1",
+    "request": "^2.34.0"
+  }
+}
