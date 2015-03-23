@@ -15,8 +15,10 @@ var RouteHandler = Router.RouteHandler;
   var Dashboard = app.components.Dashboard;
   var Login = app.components.Login;
   var Logout = app.components.Logout;
+  var About = app.components.About;
   var routes = (
     <Route name="app" path="/" handler={App}>
+      <Route name="about" handler={About}/>
       <Route name="inbox" handler={Inbox}/>
       <Route name="calendar" handler={Calendar}/>
       <Route name="login" handler={Login}/>

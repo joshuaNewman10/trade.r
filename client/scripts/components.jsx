@@ -12,6 +12,7 @@ app.components = app.components || {};
           <header>
             <ul>
               <li><Link to="app">Dashboard</Link></li>
+              <li><Link to="about">About</Link></li>
               <li><Link to="inbox">Inbox</Link></li>
               <li><Link to="calendar">Calendar</Link></li>
               <li><Link to="login">Login</Link></li>
@@ -28,7 +29,11 @@ app.components = app.components || {};
   var Dashboard = app.components.Dashboard = React.createClass({
     render: function() {
       return (
-        <p>Im the dashboard</p>
+        <div className="banner">
+          <h2>Invest your spare cash</h2>
+          <h3>Play the market</h3>
+          <Link to="about">Learn More</Link>
+        </div>
       );
     }
   });
