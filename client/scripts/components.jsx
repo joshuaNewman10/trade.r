@@ -45,15 +45,32 @@ app.components = app.components || {};
   });
 
   var InvestmentList = app.components.InvestmentList = React.createClass({
+    getInitialState: function() {
+      return {
+        investments: []
+      }
+    },
+    componentWillMount: function() {
+      console.log('about to put Investment list page');
+    },
+    loadInvestmentsFromServer: function() {
+      var data = app.loadInvestmentsFromServer();
+      this.setState({investments: data});
+    },
+    componentDidMount: function() {
+      var data = this.loadInvestmentsFromServer();
+    },
     render: function() {
       return (
-        <ul>
-          <li><Investment /></li>
-          <li><Investment /></li>
-          <li><Investment /></li>
-          <li><Investment /></li>
-          <li><Investment /></li>
-          <li><Investment /></li>
+        <ul className="investments">
+          {this.state.investments.map(function(investment, index) {
+            return (
+              <Investment 
+                investment = {investment}
+                index = {index}
+              />
+            );
+          }.bind(this))}
         </ul>
       );
     }
@@ -63,8 +80,8 @@ app.components = app.components || {};
     render: function() {
       return (
        <div>
-         <p>Im an investment</p>
-         <img src="http://placehold.it/150x150"></img>
+         <p>{this.props.investment.title}</p>
+         <img src={this.props.investment.src}></img>
       </div>
       );
     }

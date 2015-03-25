@@ -1,5 +1,13 @@
 /** @jsx React.Dom */
 var app = app || {};
+
+app.FIXTURES = [
+   {title: 'Investment 1', src: 'http://placehold.it/150x150'},
+   {title: 'Investment 2', src: 'http://placehold.it/150x150'},
+   {title: 'Investment 3', src: 'http://placehold.it/150x150'},
+   {title: 'Investment 4', src: 'http://placehold.it/150x150'}
+];
+
 var Router = ReactRouter; // or var Router = ReactRouter; in browsers
 var DefaultRoute = Router.DefaultRoute;
 var Link = Router.Link;
@@ -29,6 +37,9 @@ var RouteHandler = Router.RouteHandler;
   Router.run(routes, function (Handler) {
     React.render(<Handler/>, document.getElementById('example'));
   });
+ };
+ app.loadInvestmentsFromServer = function() {
+   return app.FIXTURES;
  };
   app.init();
 })();
