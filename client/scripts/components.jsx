@@ -6,6 +6,11 @@ app.components = app.components || {};
 (function() {
 
   var App = app.components.App = React.createClass({
+    getInitialState: function() {
+     return {
+      loggedIn: auth.loggedIn();
+     }
+    },
     render: function() {
       return (
         <div>
