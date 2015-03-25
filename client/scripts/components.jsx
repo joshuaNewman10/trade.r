@@ -29,11 +29,43 @@ app.components = app.components || {};
   var Dashboard = app.components.Dashboard = React.createClass({
     render: function() {
       return (
-        <div className="banner">
-          <h2>Invest your spare cash</h2>
-          <h3>Play the market</h3>
-          <Link to="about">Learn More</Link>
+        <div>
+          <div className="banner">
+            <h2>Invest your spare cash</h2>
+            <h4>Play the market</h4>
+            <Link to="about">Learn More</Link>
+          </div>
+          <div className="investments">
+            <h3>Hot Investments</h3>
+            <InvestmentList />
+          </div>
         </div>
+      );
+    }
+  });
+
+  var InvestmentList = app.components.InvestmentList = React.createClass({
+    render: function() {
+      return (
+        <ul>
+          <li><Investment /></li>
+          <li><Investment /></li>
+          <li><Investment /></li>
+          <li><Investment /></li>
+          <li><Investment /></li>
+          <li><Investment /></li>
+        </ul>
+      );
+    }
+  });
+
+  var Investment = app.components.Investment = React.createClass({
+    render: function() {
+      return (
+       <div>
+         <p>Im an investment</p>
+         <img src="http://placehold.it/150x150"></img>
+      </div>
       );
     }
   });

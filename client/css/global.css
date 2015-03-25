@@ -8,9 +8,10 @@ body {
 
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   font-weight: 100;
   color: hsl(200, 50%, 50%);
+  text-align: center;
 }
 
 li {
@@ -21,6 +22,21 @@ li {
 
 .banner {
  background-color: black;
+}
+
+.title {
+ display: inline-block;
+ font-size: 50px;
+}
+
+.logo {
+  display: inline-block;
+  height: 60px;
+  widows: 60px;
+  margin-bottom: 20px;
+  padding-left: 40px;
+  padding-top: 11px;
+  padding-bottom: 0px;
 }
 
 .banner h2, .banner h3, .banner a {
