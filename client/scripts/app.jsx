@@ -18,19 +18,20 @@ var RouteHandler = Router.RouteHandler;
   'use strict';
  app.init = function() {
   var App = app.components.App;
-  var Inbox = app.components.Inbox;
-  var Calendar = app.components.Calendar;
+  var Markets = app.components.Markets;
   var Dashboard = app.components.Dashboard;
   var Login = app.components.Login;
   var Logout = app.components.Logout;
+  var FAQ = app.components.FAQ;
   var About = app.components.About;
+  var GetStarted = app.components.getStarted;
   var routes = (
     <Route name="app" path="/" handler={App}>
       <Route name="about" handler={About}/>
-      <Route name="inbox" handler={Inbox}/>
-      <Route name="calendar" handler={Calendar}/>
+      <Route name="markets" handler={Markets}/>
+      <Route name="faq" handler={FAQ}/>
       <Route name="login" handler={Login}/>
-      <Route name="logout" handler={Logout}/>
+      <Route name="started" handler={GetStarted}/>
       <DefaultRoute handler={Dashboard}/>
     </Route>
   );

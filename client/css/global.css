@@ -54,3 +54,8 @@ a.active {
 .breadcrumbs a {
   text-decoration: none;
 }
+
+.aboutList li {
+  display: block;
+}
+
