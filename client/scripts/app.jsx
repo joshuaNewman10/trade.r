@@ -28,6 +28,7 @@ var RouteHandler = Router.RouteHandler;
   var routes = (
     <Route name="app" path="/" handler={App}>
       <Route name="about" handler={About}/>
+      <Route name="dashboard" handler={Dashboard}/>
       <Route name="markets" handler={Markets}/>
       <Route name="faq" handler={FAQ}/>
       <Route name="login" handler={Login}/>
