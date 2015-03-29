@@ -69,10 +69,26 @@ a.active {
   margin-right: 70px;
 }
 
+
+.about p {
+  font-size: 20px;
+}
+
 .banner p {
+  color:  white;
+  font-size: 20px;
+  padding-left: 200px;
+  padding-right: 200px;
+  line-height: 30px;
+}
+
+.values li {
+  font-size: 18px;
   color: hsl(200, 50%, 50%);
+  padding-top: 10px;
 }
 
 .vertical li{
   display: block;
 }
+

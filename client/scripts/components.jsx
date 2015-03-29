@@ -128,14 +128,18 @@ app.components = app.components || {};
   var About = app.components.About = React.createClass({
      render: function () {
        return (
-        <div>
+        <div className="about">
           <h1>About Us</h1>
           <div className="banner">
-            <p>We believe that you shouldnt need to go through a broker to access the stock market</p>
+            <p>We believe that you shouldnt need to go through a broker to access the stock market. By leveraging technology and our in depth market knowledge
+               we are able to provide a new kind of investing experience. </p> 
+
+            <p> We welcome you to explore our application and read the testimonials of our users. 
+               If you have any questions or lingering curiosities, feel free to reach out to us.</p>
           </div>
           <h2>Our Values</h2>
           <p>We provide a service that is:</p>
-          <ul>
+          <ul className="vertical values">
             <li>Transparent</li>
             <li>Convenient</li>
             <li>Secure</li>
