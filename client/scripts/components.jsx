@@ -37,12 +37,11 @@ app.components = app.components || {};
         <div>
           <ul>
             <li>{loginOrOut}</li>
-            <li><Link to="about">About</Link></li>
             <li><Link to="dashboard">Dashboard</Link> (authenticated)</li>
             <li><Link to="about">About-Us</Link></li>
             <li><Link to="markets">Markets</Link></li>
-            <li><Link to="trade">Trade</Link></li>
-            <li><Link to="account">My Account</Link></li>
+            <li><Link to="trade">Trade</Link>(authenticated)</li>
+            <li><Link to="account">My Account</Link>(authenticated)</li>
             <li><Link to="started">Get Started</Link></li>
           </ul>
           <RouteHandler/>
@@ -128,31 +127,152 @@ app.components = app.components || {};
 
   var About = app.components.About = React.createClass({
      render: function () {
-       return <h1>About</h1>;
+       return (
+        <div>
+          <h1>About Us</h1>
+          <div className="banner">
+            <p>We believe that you shouldnt need to go through a broker to access the stock market</p>
+          </div>
+          <h2>Our Values</h2>
+          <p>We provide a service that is:</p>
+          <ul>
+            <li>Transparent</li>
+            <li>Convenient</li>
+            <li>Secure</li>
+          </ul>
+          <p>Welcome to the new way to trade</p>
+          <h2>Our Story</h2>
+        </div>
+       );
      }
    });
 
   var Markets = app.components.Markets = React.createClass({
     render: function() {
-      return <h1>Markets</h1>;
+      return (
+        <div>
+          <h1>What the Markets are Doing</h1>
+          <div>
+            <h2>Market Data (pulled from Yahoo Query Library YQL)</h2>
+            <div>
+              <p>Financial Data visualization 1</p>
+              <img src="http://placehold.it/350x150"/>
+            </div>
+            <div>
+              <p>Financial Data visualization 2</p>
+              <img src="http://placehold.it/350x150"/>
+            </div>
+            <div>
+              <p>Financial Data visualization 3</p>
+              <img src="http://placehold.it/350x150"/>
+            </div>
+            <div>
+              <p>Financial Data visualization 4</p>
+              <img src="http://placehold.it/350x150"/>
+            </div>
+            <h2>Share Your Analysis</h2>
+          </div>
+        </div>
+      );
+
     }
   });
 
   var Trade = app.components.Trade = React.createClass({
+    mixins: [ Authentication ],
+
     render: function() {
-     return <h1>Trade</h1>;
+     return (
+      <div>
+        <h1>Trade</h1>
+        <div>
+          <h2>Buy</h2>
+            <div className="hotDeals horizontal">
+              <h3>Hot Deals</h3>
+              <div>
+                <p>Deal 1</p>
+                <img src="http://placehold.it/150x150"/>
+              </div>
+              <div>
+                <p>Deal 2</p>
+                <img src="http://placehold.it/150x150"/>
+              </div>
+              <div>
+                <p>Deal 3</p>
+                <img src="http://placehold.it/150x150"/>
+              </div>
+            </div>
+            <div className="investmentType horizontal">
+              <h3>Popular Trades</h3>
+              <div>
+                <h3>Munis</h3>
+                <img src="http://placehold.it/150x150"/>
+              </div>
+              <div>
+                <h3>Dow Jones</h3>
+                <img src="http://placehold.it/150x150"/>
+              </div>
+              <div>
+                <h3>Sovereign Bonds</h3>
+                <img src="http://placehold.it/150x150"/>
+              </div>
+            </div>
+        </div>
+        <div>
+          <h2>Sell</h2>
+        </div>
+      </div>
+    );
     }
   });
 
   var Account = app.components.Account = React.createClass({
+    mixins: [ Authentication ],
+
     render: function() {
-      return <h1>Account</h1>;
+      return (
+        <div>
+          <h1>My Account</h1>
+          <div className="acccounts">
+           <p>Your Bank Accounts</p>
+             <ul>
+               <li>Bank 1</li>
+               <li>Bank 2</li>
+               <li>Bank 3</li>
+             </ul>
+          </div>
+          <div className="deposit">
+            <h2>Deposit</h2>
+            <p>You can only ever lose what you put in</p>
+            <p>Add Bank Account via Stripe API</p>
+            <p>Make Deposit</p>
+          </div>
+          <div className="withdraw">
+            <h2>Withdraw</h2>
+            <p>Current Balance: 200</p>
+            <p>Make a withdrawl</p>
+          </div>
+        </div>
+      );
     }
   });
 
   var Started = app.components.Started = React.createClass({
     render: function() {
-      return <h1>Started</h1>;
+      return (
+        <div>
+          <h1>Get Started</h1>
+          <p>Ready to experience the future of trading?</p>
+          <p>Follow these quick, simple steps to get started now</p>
+          <ul className="startedSteps">
+            <li>Set up an account with our authentication system</li>
+            <li>Tell us about your financial goals</li>
+            <li>Fund your account via our payment system</li>
+            <li>Lock in your first trade</li>
+          </ul>
+        </div>
+      );
+
     }
   });
 

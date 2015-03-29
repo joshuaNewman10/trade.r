@@ -59,3 +59,12 @@ a.active {
   display: block;
 }
 
+.startedSteps li {
+  display: block;
+}
+
+.horizontal div {
+  display: inline-block;
+  margin-left: 120px;
+  margin-right: 70px;
+}
