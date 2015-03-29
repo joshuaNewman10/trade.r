@@ -18,24 +18,28 @@ var RouteHandler = Router.RouteHandler;
   'use strict';
  app.init = function() {
   var App = app.components.App;
-  var Markets = app.components.Markets;
-  var Dashboard = app.components.Dashboard;
   var Login = app.components.Login;
   var Logout = app.components.Logout;
-  var FAQ = app.components.FAQ;
+  var Dashboard = app.components.Dashboard;
   var About = app.components.About;
-  var GetStarted = app.components.getStarted;
-  var routes = (
-    <Route name="app" path="/" handler={App}>
-      <Route name="about" handler={About}/>
-      <Route name="dashboard" handler={Dashboard}/>
-      <Route name="markets" handler={Markets}/>
-      <Route name="faq" handler={FAQ}/>
-      <Route name="login" handler={Login}/>
-      <Route name="started" handler={GetStarted}/>
-      <DefaultRoute handler={Dashboard}/>
-    </Route>
-  );
+  var Markets = app.components.Markets;
+  var Trade = app.components.Trade;
+  var Account = app.components.Account;
+  var Started = app.components.Started;
+
+ var routes = (
+  <Route handler={App}>
+    <Route name="login" handler={Login}/>
+    <Route name="logout" handler={Logout}/>
+    <Route name="dashboard" handler={Dashboard}/>
+    <Route name="about" handler={About}/>
+    <Route name="markets" handler={Markets}/>
+    <Route name="trade" handler={Trade}/>
+    <Route name="account" handler={Account}/>
+    <Route name="started" handler={Started}/>
+  </Route>
+);
+
   Router.run(routes, function (Handler) {
     React.render(<Handler/>, document.getElementById('example'));
   });
