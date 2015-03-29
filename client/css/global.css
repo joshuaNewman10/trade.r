@@ -65,6 +65,14 @@ a.active {
 
 .horizontal div {
   display: inline-block;
-  margin-left: 120px;
+  margin-left: 130px;
   margin-right: 70px;
+}
+
+.banner p {
+  color: hsl(200, 50%, 50%);
+}
+
+.vertical li{
+  display: block;
 }

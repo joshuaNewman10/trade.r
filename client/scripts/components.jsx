@@ -141,7 +141,12 @@ app.components = app.components || {};
             <li>Secure</li>
           </ul>
           <p>Welcome to the new way to trade</p>
-          <h2>Our Story</h2>
+          <div className="story">
+            <h2>Our Story</h2>
+          </div>
+          <div className="team">
+            <h2>Our Team</h2>
+          </div>
         </div>
        );
      }
@@ -220,6 +225,28 @@ app.components = app.components || {};
         </div>
         <div>
           <h2>Sell</h2>
+          <h3>Your Portfolio</h3>
+          <div className="portfolio horizontal">
+            <div className="composition">
+               <h4>Portfolio Composition</h4>
+              <ul className="vertical">
+                <li>Sovereign Bonds: 20%</li>
+                <li>Munis: 60%</li>
+                <li>Other: 20%</li>
+              </ul>
+            </div>
+            <div className="performance">
+               <h4>Portfolio Performance</h4>
+               <ul className="vertical">
+                 <li>Last week: +2%</li>
+                 <li>Last month: +5%</li>
+                 <li>Last year: +2%</li>
+               </ul>
+            </div>
+            <div className="sell">
+              <button>Sell Portfolio Assets</button>
+            </div>
+          </div>
         </div>
       </div>
     );
